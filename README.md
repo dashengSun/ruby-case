@@ -1,48 +1,43 @@
 # Ruby tips
 
-1.每当修改Gemfile的时候，都要执行一次 bundle install.
-2.command+N 新建一个terminal
-3.显示routes:
+1. 每当修改Gemfile的时候，都要执行一次 bundle install.
+2. command+N 新建一个terminal
+3. 显示routes:
 http://localhost:3000/rails/info/routes
 或者  rake routes
-4.创建模型：
+4. 创建模型：
 rails generate scaffold topic title:string description:text   生成默认增删改查的方法
 rails generate model vote topic_id:integer  只生成模型
 rake db:migrate  数据库操作
-5.创建 rails 项目
+5. 创建 rails 项目
 rails new rails101
-6.form_for 是 Rails 的表单产生器
-
-7.添加新文件：touch app/views/….
-
-8.新建模型
+6. form_for 是 Rails 的表单产生器
+7. 添加新文件：touch app/views/….
+8. 新建模型
 ->rails g model post content:text group_id:integer user_id:integer
 ->rake db:migrate
 ->添加关系has_many和belongs_to
-
-9.新建controller
+9. 新建controller
 rails g controller posts
-
 10. 技术文章 ORID
 Objective 完成了什么
 Reflective 形容今天的情绪
 Interpretive 重要的领悟是什么
 Decisional 用一句话形容今天的工作，明天需要做什么
-
-11.git push origin master
+11. git push origin master
 更新github
 
-12.flat-map
+12. flat-map
 Map a function over a collection and flatten the result by one-level
+```
 ["two birds", "three green peas"].
   flat_map {|s| s.split}
 # => ["two", "birds", "three", "green", "peas"]
-
-13.总结
+```
+13. 总结
 1) 类／对象，继承
 build-in class
 Kernel module
-
 2) String
 method: length, upcase
 
@@ -53,11 +48,13 @@ with multiple
 lines}   多行赋值
 
 here document:
+```
 x = <<END_MY_STRING_PLEASE
 This is a string
 with multiple
 lines
 END_MY_STRING_PLEASE
+```
 
 ASCII value:
 ‘x’.ord  或者 ‘x’.sum
@@ -131,7 +128,7 @@ $ 代表全局变量
 11) Gem搜索
 gem query —remote —name-matches sequel
 
-12)重定向标准输出到文件
+12) 重定向标准输出到文件
 ruby test.rb < somefile.txt
 
 13) line = gets   读取一行输入
